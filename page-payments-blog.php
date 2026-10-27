@@ -29,7 +29,7 @@ get_header();
                 while ($blog_query->have_posts()): $blog_query->the_post();
             ?>
                 <article class="blog-card">
-                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                    <h2><a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_title() ); ?></a></h2>
                     <div class="excerpt">
                         <?php the_excerpt(); ?>
                     </div>
